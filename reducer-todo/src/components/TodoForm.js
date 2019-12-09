@@ -14,7 +14,7 @@ const TodoForm = ({ addTodo, filterCompleted }) => {
 
     addTodo(newTodo);
 
-    setNewTodo({ item: "", dueDate: "" });
+    setNewTodo({ item: "" });
   };
 
   return (

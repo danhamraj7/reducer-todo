@@ -22,9 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Dan todo list</h1>
       <TodoForm addTodo={addTodo} filterCompleted={filterCompleted} />
-      <TodoList />
+      <TodoList todos={state.todos} toggleCompleted={toggleCompleted} />
     </div>
   );
 }
