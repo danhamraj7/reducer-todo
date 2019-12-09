@@ -2,6 +2,22 @@ import shortid from "shortid";
 
 function reducer(state, action) {
   switch (action.type) {
+    case "ADD_TODO":
+      return {
+        ...state,
+
+        todos: [
+          ...state.todos,
+
+          {
+            id: shortid(),
+
+            item: action.payload.item,
+
+            completed: false
+          }
+        ]
+      };
     default:
       return state;
   }

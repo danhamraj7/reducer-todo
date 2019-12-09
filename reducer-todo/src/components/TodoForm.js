@@ -28,14 +28,6 @@ const TodoForm = ({ addTodo, filterCompleted }) => {
           value={newTodo.item}
         />
 
-        <input
-          onChange={handleInputChange}
-          type="text"
-          name="dueDate"
-          placeholder="Due Date"
-          value={newTodo.dueDate}
-        />
-
         <button type="submit">Add Todo</button>
 
         <button onClick={filterCompleted}>Clear Completed</button>
