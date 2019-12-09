@@ -1,4 +1,6 @@
-export function reducer(state, action) {
+import shortid from "shortid";
+
+function reducer(state, action) {
   switch (action.type) {
     default:
       return state;
@@ -26,3 +28,5 @@ const initialState = {
     }
   ]
 };
+
+export { initialState, reducer };
