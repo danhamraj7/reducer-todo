@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const TodoForm = ({ addTodo, filterCompleted }) => {
-  const [newTodo, setNewTodo] = useState({ item: "", dueDate: "" });
+  const [newTodo, setNewTodo] = useState({ item: "" });
 
   const handleInputChange = e => {
     setNewTodo({ ...newTodo, [e.target.name]: e.target.value });
@@ -9,11 +9,8 @@ const TodoForm = ({ addTodo, filterCompleted }) => {
 
   const handleFormSubmit = e => {
     e.preventDefault();
-
     if (!newTodo.item.trim()) return;
-
     addTodo(newTodo);
-
     setNewTodo({ item: "" });
   };
 
